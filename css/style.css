@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+
+p {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+.content-wrapper {
+    max-width: 1280px;
+    min-width: 1280px;
+}
+
+#top {
+    background-image: url(../img/top-natsu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#top p {
+    color: #07295b;
+    font-size: 31.25px;
+    text-shadow:
+    -1px -1px 0 #ffffff68,
+     0   -1px 0 #ffffff68,
+     1px -1px 0 #ffffff68,
+     1px  0   0 #ffffff68,
+     1px  1px 0 #ffffff68,
+     0    1px 0 #ffffff68,
+    -1px  1px 0 #ffffff68,
+    -1px  0   0 #ffffff68;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+}
+
+.title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+#nav {
+    background-image: url(../img/navbar.png);
+    background-position: center;
+}
+
+.nav-text {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.nav-text a {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 27.78px;
+    color: #07295b;
+    text-decoration: none;
+}
+.nav-text a:hover{
+    color: #fff
+}
