@@ -12,25 +12,88 @@
 <body>
     <div class="content-wrapper">
         <div id="top">
-                <img class="title" src="img/title.png" alt=""></a>
+            <img class="title" src="img/title.png" alt=""></a>
             <p>『宿泊者様専用』大浴場などの設備や充実したサービスで <br>
                 ファミリーやグループでゆったりとお過ごしいただけます。</p>
-                <div id="nav">
-                    <div class="nav-text">
-                        <a class="link" href="#充実のホテル滞在 ">充実のホテル滞在</a>
-                        <a>|</a>
-                        <a class="link" href="#ママ・パパも安心">ママ・パパも安心</a>
-                        <a>|</a>
-                        <a class="link" href="#ホテルでキャンプ体験">ホテルでキャンプ体験</a>
-                        <a>|</a>
-                        <a class="link" href="#最高のブフェー">最高のブフェー</a>
-
-
-                    </div>
+            <div id="nav">
+                <div class="nav-text">
+                    <a class="link" href="#充実のホテル滞在 ">充実のホテル滞在</a>
+                    <a>|</a>
+                    <a class="link" href="#ママ・パパも安心">ママ・パパも安心</a>
+                    <a>|</a>
+                    <a class="link" href="#ホテルでキャンプ体験">ホテルでキャンプ体験</a>
+                    <a>|</a>
+                    <a class="link" href="#最高のブフェー">最高のブフェー</a>
                 </div>
+            </div>
+        </div>
+        <div id="body-1">
+            <div class="waves">
+                <img src="img/waves.png" alt="">
+                <div class="body-h1">
+                <h1>ファミリーやグループでゆったり <br>
+                    充実のホテル滞在</h1>
+                </div></div>
+                <div class="container">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <img src="img/body/01_ファミリー.jpg" style="width:640px">
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <img src="img/body/02_ファミリー.jpg" style="width:300px">
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <img src="img/body/03_ファミリー.jpg" style="width:640px">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/body/04_ファミリー.jpg" style="width:640px">
+                      </div>
+                      <div class="mySlides fade">
+                        <img src="img/body/05_ファミリー.jpg" style="width:640px">
+                      </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <div class="text">
+                    <p>大空リゾート®からは無料のシャトルバス<br>によるアクセスも可能です。ホテルに<br>到着したらフロントでチェックインを<br>
+                        お済ませ下さい。</p>
+                    </div> </div>
+                    <br>
+                  <div class="dot-wrapper">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                  </div>
         </div>
     </div>
 
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+        </script>
 </body>
 
 </html>
