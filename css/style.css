@@ -123,7 +123,7 @@ p {
 .slideshow-container {
   width: 50%;
   position: relative;
-  display: flex;
+  display: block;
   justify-content: center;
 }
 
@@ -163,7 +163,7 @@ p {
 }
 
 .dot-wrapper {
-  max-width: 50%;
+  max-width: 100%;
   text-align: center;
   display: block;
 }
