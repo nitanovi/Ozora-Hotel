@@ -1,212 +1,252 @@
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Kosugi+Maru&display=swap');
 
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
+
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    outline: 1px solid red;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: 1px solid red;
 }
 
 p {
-    font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'Kosugi Maru', sans-serif;
 }
-h1 {
-    font-family: 'BIZ UDPGothic', sans-serif;
-    font-size: 48.83px;
-    text-align: center;
+
+.body-h1 {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 40.25px;
+  text-align: center;
+  fill-opacity: 0;
+}
+
+@supports((text-stroke: 2px #07295b) or (-webkit-text-stroke: 2px #07295b)) {
+  .body-h1 {
     color: transparent;
-    text-shadow:
-    -1px -1px 0 #07295b,
-     0   -1px 0 #07295b,
-     1px -1px 0 #07295b,
-     1px  0   0 #07295b,
-     1px  1px 0 #07295b,
-     0    1px 0 #07295b,
-    -1px  1px 0 #07295b,
-    -1px  0   0 #07295b;
+    -webkit-text-stroke: 3px #07295b;
+    text-stroke: 2px #07295b;
+    text-shadow: none;
+  }
 }
 
 #top {
-    background-image: url(../img/top-natsu.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url(../img/top-natsu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .top-wrapper p {
-    color: #07295b;
-    font-size: 31.25px;
-    text-shadow:
+  color: #07295b;
+  font-size: 46.88px;
+  text-shadow:
     -1px -1px 0 #ffffff68,
-     0   -1px 0 #ffffff68,
-     1px -1px 0 #ffffff68,
-     1px  0   0 #ffffff68,
-     1px  1px 0 #ffffff68,
-     0    1px 0 #ffffff68,
-    -1px  1px 0 #ffffff68,
-    -1px  0   0 #ffffff68;
-    text-align: center;
-    margin: 32px 20px 125px 20px;
+    0 -1px 0 #ffffff68,
+    1px -1px 0 #ffffff68,
+    1px 0 0 #ffffff68,
+    1px 1px 0 #ffffff68,
+    0 1px 0 #ffffff68,
+    -1px 1px 0 #ffffff68,
+    -1px 0 0 #ffffff68;
+  text-align: center;
+  margin: 110px 20px 88px 20px;
 }
 
 .title {
-    display: block;
-    margin-top: 32px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  margin-top: 117px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 #nav {
-    /*width: 100%;
+  /*width: 100%;
     position: fixed;
     top: 0;
-    z-index: 5; */ 
-    background-image: url(../img/navbar.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    z-index: 5; */
+  background-image: url(../img/navbar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nav-text {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
 }
+
 .nav-text a {
-    font-family: 'Kosugi Maru', sans-serif;
-    font-size: 27.78px;
-    color: #07295b;
-    text-decoration: none;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 27.78px;
+  color: #07295b;
+  text-decoration: none;
 }
-.nav-text .link:hover{
-    color: #fff
+
+.nav-text .link:hover {
+  color: #fff
 }
+
 #body1 {
-    background-image: url(../img/bg-1.png);
-    background-size: 100%;
-    background-attachment: fixed;
+  background-image: url(../img/bg-1.png);
+  background-size: 100%;
+  background-attachment: fixed;
 }
+
 .waves {
-    background-image: url(../img/waves.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:auto;
-    overflow: visible;
+  background-image: url(../img/waves.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: visible;
 }
-.body-h1 h1{
-    text-align: center;
-    margin: 20px 20px 0px 20px;
-    padding: 35px
+
+.body-h1 h1 {
+  text-align: center;
+  margin: 20px 20px 0px 20px;
+  padding: 35px
 }
+
 /* slider */
 
 .slideshow-container {
   width: 50%;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  .dot-wrapper {
-    max-width: 50%;
-    text-align: center;
-    display: block;
-  }
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #55afc6;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #236e81;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+  display: none;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot-wrapper {
+  max-width: 50%;
+  text-align: center;
+  display: block;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #55afc6;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #236e81;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
   }
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center
+  to {
+    opacity: 1
   }
-  .text {
-    font-family: 'Kosugi Maru', sans-serif;
-    font-size: 31.25px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .button-1a{
-    background-image: url(../img/button-1.png);
-    background-repeat: no-repeat;
-  }
-  .p-button {
-    color: #9a9516;
-    font-family: 'Kosugi Maru', sans-serif;
-    font-size: 25px;
-    text-shadow:
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.text {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 46.88px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+}
+
+.button-1 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button-1a {
+  background-image: url(../img/button-1.png);
+  background-repeat: no-repeat;
+  width: 50%;
+  max-height: 100%;
+  background-size: contain;
+}
+
+.p-button {
+  color: #9a9516;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 37.5px;
+  text-shadow:
     -1px -1px 0 #fff,
-     0   -1px 0 #fff,
-     1px -1px 0 #fff,
-     1px  0   0 #fff,
-     1px  1px 0 #fff,
-     0    1px 0 #fff,
-    -1px  1px 0 #fff,
-    -1px  0   0 #fff;
-    text-align: center;
-  }
-  .p-button .bold {
-    color: #827e16;
-  }
+    0 -1px 0 #fff,
+    1px -1px 0 #fff,
+    1px 0 0 #fff,
+    1px 1px 0 #fff,
+    0 1px 0 #fff,
+    -1px 1px 0 #fff,
+    -1px 0 0 #fff;
+  text-align: center;
+  margin : 70px 0px 63px 0px;
+}
+
+.p-button .bold {
+  color: #827e16;
+}
