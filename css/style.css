@@ -123,7 +123,6 @@ p {
 .slideshow-container {
   width: 50%;
   position: relative;
-  display: block;
   justify-content: center;
 }
 
@@ -131,6 +130,11 @@ p {
 .mySlides {
   display: none;
   text-align: center;
+}
+.slide-img {
+  width: 100%;
+  max-width: 630px;
+  height: auto;
 }
 
 /* Next & previous buttons */
@@ -215,19 +219,21 @@ p {
   display: flex;
 }
 
-.button-1 {
-  align-items: center;
+.button-1-container {
+  justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 100%;
 }
 
 .button-1a {
   background-image: url(../img/button-1.png);
   background-repeat: no-repeat;
-  width: 50%;
-  max-height: 100%;
-  background-size: contain;
+  max-width: 50%;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  flex : 1;
 }
 
 .p-button {
@@ -244,9 +250,10 @@ p {
     -1px 1px 0 #fff,
     -1px 0 0 #fff;
   text-align: center;
-  margin : 70px 0px 63px 0px;
+  margin : 58px 10px 80px 10px;
 }
 
-.p-button .bold {
+.p-button .bold a {
   color: #827e16;
+  text-decoration: none;
 }
