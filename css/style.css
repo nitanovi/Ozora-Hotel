@@ -128,7 +128,7 @@ p {
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+  display: flex;
   text-align: center;
 }
 .slide-img {
@@ -216,7 +216,6 @@ p {
   font-size: 46.88px;
   text-align: center;
   margin: 0 auto;
-  display: flex;
 }
 
 .button-1-container {
@@ -234,6 +233,7 @@ p {
   background-position: center;
   position: relative;
   flex : 1;
+  z-index: 2;
 }
 
 .p-button {
@@ -256,4 +256,21 @@ p {
 .p-button .bold a {
   color: #827e16;
   text-decoration: none;
+}
+.sand {
+  position: relative;
+  z-index: 3;
+}
+.sand-bg {
+  background-image: url(../img/sand.png);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 367px;
+  top: -90px;
+  position: relative;
+  z-index: 1;
+}
+.kani img {
+  position: absolute;
 }
