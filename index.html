@@ -50,7 +50,7 @@
             </div>
 
             <div class="mySlides fade">
-              <img src="img/body/02_ファミリー.jpg"class="slide-img">
+              <img src="img/body/02_ファミリー.jpg" class="slide-img">
               <div class="text">
                 <p>客室は全室広々設計で、ファミリーや<br>グループみんなでくつろげます。また、<br>全室がバス・トイレ別で、洗い場付きの<br>
                   お風呂はお子様がいるファミリーに<br>ご好評です。</p>
@@ -81,72 +81,98 @@
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <div class="dot-wrapper">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
           </div>
         </div>
         <br>
-        
+
         <div class="button-1">
           <div class="button-1-container">
-          <div class="button-1a">
-            <p class="p-button">駐車場無料【最大32時間ステイ】<br>
-              15時から翌23時まで<br>
-              滞在できるバルコニー付き客室<br><br>
-              <b class="bold"><a href="">≫宿泊予約はこちら≪</a></b>
-            </p>
+            <div class="button-1a">
+              <p class="p-button">駐車場無料【最大32時間ステイ】<br>
+                15時から翌23時まで<br>
+                滞在できるバルコニー付き客室<br><br>
+                <b class="bold"><a href="">≫宿泊予約はこちら≪</a></b>
+              </p>
+            </div>
+            <div class="button-1a">
+              <p class="p-button">駐車場無料【最大32時間ステイ】<br>
+                朝5時から翌13時まで<br>
+                滞在できるバルコニー付き客室<br><br>
+                <b class="bold"><a href="">≫宿泊予約はこちら≪</a></b>
+              </p>
+            </div>
           </div>
-          <div class="button-1a">
-            <p class="p-button">駐車場無料【最大32時間ステイ】<br>
-              朝5時から翌13時まで<br>
-              滞在できるバルコニー付き客室<br><br>
-              <b class="bold"><a href="">≫宿泊予約はこちら≪</a></b>
-            </p>
-          </div>
-        </div>
         </div>
         <div class="sand">
           <div class="sand-bg">
-          <div class="kani">
-          <img src="img/umi_kani_2.png" alt="">
-          <img src="img/umi_kani_1.png" alt=""></div></div>
+            <div class="kani">
+              <img src="img/umi_kani_2.png" alt="">
+              <img src="img/umi_kani_1.png" alt="">
+            </div>
+          </div>
         </div>
         <br>
       </div>
     </div>
-    <div class="body-2">
-
+    <div id="body-2">
+      <div class="body2-wrapper">
+        <br>
+        <div class="waves">
+          <div class="body-h1">
+            <h1>ママ・パパも安心<br>
+              「ウェルカムベビーのお宿」認定 </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="img/body/01_ベビー.jpg" style="width:100%">
+            <img src="img/body/02_ベビー.jpg" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="img/body/03_ベビー.jpg" style="width:100%">
+            <img src="img/body/04_ベビー.jpg" style="width:100%">
+          </div>
+        </div>
+        <div class="text">
+        <p>大空ホテルは「ウェルカムベビーのお宿」認定ホテルです。全室が<br>バス・トイレ独立型で小さなお子様と
+          一緒の宿泊にも安心。<br>認定部屋のプラナフォースルームは靴が脱げるお部屋で<br>お子様と一緒にお寛ぎいただけます。</p></div>
+          <div class="button-2">
+          <p class="p-button">家族旅行応援【ウェルカムベビーのお宿】
+            <br><br>
+            <b class="bold"><a href="">≫宿泊予約はこちら≪</a></b>
+          </p></div>
+      </div>
     </div>
-  </div>
-  </div>
 
-  <script>
-    let slideIndex = 0;
-    showSlides();
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    <script>
+      let slideIndex = 0;
+      showSlides();
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
       }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
       }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 3000); // Change image every 2 seconds
-    }
-  </script>
+    </script>
 </body>
 
 </html>
