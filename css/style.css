@@ -22,7 +22,7 @@ p {
 
 .body-h1 {
   font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 40.25px;
+  font-size: 28.80px;
   text-align: center;
   fill-opacity: 0;
 }
@@ -41,11 +41,12 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-bottom: 60px;
 }
 
 .top-wrapper p {
   color: #07295b;
-  font-size: 46.88px;
+  font-size: 36.00px;
   text-shadow:
     -1px -1px 0 #ffffff68,
     0 -1px 0 #ffffff68,
@@ -56,12 +57,12 @@ p {
     -1px 1px 0 #ffffff68,
     -1px 0 0 #ffffff68;
   text-align: center;
-  margin: 110px 20px 88px 20px;
+  margin: 80px 20px 90px 20px;
 }
 
 .title {
   display: block;
-  margin-top: 117px;
+  margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
@@ -77,6 +78,10 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-top: -80px;
 }
 
 .nav-text {
@@ -214,7 +219,7 @@ p {
 
 .text {
   font-family: 'Kosugi Maru', sans-serif;
-  font-size: 46.88px;
+  font-size: 23.04px;
   text-align: center;
   margin: 0 auto;
 }
@@ -240,7 +245,7 @@ p {
 .p-button {
   color: #9a9516;
   font-family: 'Kosugi Maru', sans-serif;
-  font-size: 37.5px;
+  font-size: 28.80px;
   text-shadow:
     -1px -1px 0 #fff,
     0 -1px 0 #fff,
@@ -268,15 +273,14 @@ p {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 367px;
-  top: -90px;
+  top: -65px;
   position: relative;
   z-index: 1;
 }
-.kani {
-  z-index: 3;
-}
 .kani img {
   position: absolute;
+  top: -100px;
+  z-index: 3;
 }
 /* Body 2 */
 #body-2{
