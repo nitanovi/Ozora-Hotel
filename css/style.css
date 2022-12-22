@@ -136,6 +136,7 @@ p {
   display: flex;
   text-align: center;
 }
+
 .slide-img {
   width: 100%;
   max-width: 630px;
@@ -238,7 +239,7 @@ p {
   background-size: 100%;
   background-position: center;
   position: relative;
-  flex : 1;
+  flex: 1;
   z-index: 2;
 }
 
@@ -256,17 +257,19 @@ p {
     -1px 1px 0 #fff,
     -1px 0 0 #fff;
   text-align: center;
-  margin : 58px 10px 80px 10px;
+  margin: 58px 10px 80px 10px;
 }
 
 .p-button .bold a {
   color: #827e16;
   text-decoration: none;
 }
+
 .sand {
   position: relative;
   margin-bottom: -50px;
 }
+
 .sand-bg {
   background-image: url(../img/sand.png);
   background-position: center;
@@ -277,26 +280,49 @@ p {
   position: relative;
   z-index: 1;
 }
+
 .kani img {
   position: absolute;
   top: -100px;
   z-index: 3;
   display: block;
 }
-.kani .kani1 img{
-right: 0;
+
+.kani .kani1 img {
+  right: 0;
 }
-.kani-2 .kani3 img{
-right: 0;
+/* Body 2 */
+.kani-2 .kani3 img {
+  right: 0;
 }
+
 .kani-2 .kani1 img {
   top: 30px;
   left: 250px;
 }
+/* Body 3 */
+.kani-3 .kani4 img {
+  right: 0;
+}
+
+.kani-3 .kani1 img {
+  top: 30px;
+  left: 250px;
+}
+
+.kani-3 .kani3 img {
+  top: 20px;
+  left: 550px;
+}
+
 /* Body 2 */
 #body-2{
   background-image: url(../img/bg-2.png);
 }
+#body-3{
+  background-image: url(../img/bg-4.png);
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -319,6 +345,7 @@ right: 0;
   vertical-align: middle;
   width: 50%;
 }
+
 .button-2 {
   background-image: url(../img/button-2.png);
   background-repeat: no-repeat;
@@ -326,13 +353,15 @@ right: 0;
   background-size: 100%;
   background-position: center;
   position: relative;
-  flex : 1;
+  flex: 1;
   z-index: 2;
 }
+
 .button-2 .p-button {
   margin: 50px 10px 0px 10px;
   padding: 80px 10px 80px 10px;
 }
+
 .button-3-container {
   justify-content: space-between;
   display: flex;
@@ -347,9 +376,10 @@ right: 0;
   background-size: 100%;
   background-position: center;
   position: relative;
-  flex : 1;
+  flex: 1;
   z-index: 2;
 }
+
 .button-3b {
   background-image: url(../img/button-3b.png);
   background-repeat: no-repeat;
@@ -357,18 +387,111 @@ right: 0;
   background-size: 100%;
   background-position: center;
   position: relative;
-  flex : 1;
+  flex: 1;
   z-index: 2;
 }
+
 .button-3-container .p-button {
-  margin : 58px 10px 80px 10px;
+  margin: 58px 10px 63px 10px;
+}
+.button-4 {
+  background-image: url(../img/button-4.png);
+  background-repeat: no-repeat;
+  max-width: 99%;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  flex: 1;
+  z-index: 2;
 }
 
-
-  @media screen and (max-width: 375px) {
-    .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-    }
+.button-4 .p-button {
+  margin: 50px 10px -20px 10px;
+  padding: 104px 10px 116px 10px;
+}
+.button-5 {
+  background-image: url(../img/button-5.png);
+  background-repeat: no-repeat;
+  max-width: 99%;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  flex: 1;
+  z-index: 2;
+}
+.button-6 {
+  background-image: url(../img/button-6.png);
+  background-repeat: no-repeat;
+  max-width: 50%;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  flex: 1;
+  z-index: 2;
+}
+.button-7 {
+  background-image: url(../img/button-7.png);
+  background-repeat: no-repeat;
+  max-width: 50%;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  flex: 1;
+  z-index: 2;
+}
+.button-8 {
+  background-image: url(../img/button-8.png);
+  background-repeat: no-repeat;
+  max-width: 99%;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  flex: 1;
+  z-index: 2;
+}
+.container2 {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.slideshow-container2 {
+  width: 50%;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+}
+.rating {
+  background-color: #fff;
+  box-shadow: 1px 5px 5px 6px #a8852e;
+  background-repeat: no-repeat;
+  max-width: 99%;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+}
+.rating p {
+  color: #775b2f;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 28.80px;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 30px;
+}
+.rating .star {
+  color: #bc9d4a;
+  padding-top: 20px;
+  padding-bottom: 0;
+  margin: 0;
+}
+.bg-beach {
+  background-image: url(../img/bg-3.png);
+  background-size: 100%;
+}
+@media screen and (max-width: 375px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
   }
+}
