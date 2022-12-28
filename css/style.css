@@ -20,597 +20,1271 @@ p {
   font-family: 'Kosugi Maru', sans-serif;
 }
 
-.body-h1 {
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 28.80px;
-  text-align: center;
-  fill-opacity: 0;
-}
-
-@supports((text-stroke: 2px #07295b) or (-webkit-text-stroke: 2px #07295b)) {
-  .body-h1 {
-    color: transparent;
-    -webkit-text-stroke: 3px #07295b;
-    text-stroke: 2px #07295b;
-    text-shadow: none;
+@media screen and (min-width: 375px) {
+  #nav {
+    display: none;
   }
-}
 
-#top {
-  background-image: url(../img/top-natsu.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-bottom: 60px;
-}
+  a {
+    text-decoration: none;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #07295b;
+  }
 
-.top-wrapper p {
-  color: #07295b;
-  font-size: 36.00px;
-  text-shadow:
-    -1px -1px 0 #ffffff68,
-    0 -1px 0 #ffffff68,
-    1px -1px 0 #ffffff68,
-    1px 0 0 #ffffff68,
-    1px 1px 0 #ffffff68,
-    0 1px 0 #ffffff68,
-    -1px 1px 0 #ffffff68,
-    -1px 0 0 #ffffff68;
-  text-align: center;
-  margin: 80px 20px 90px 20px;
-}
+  ul {
+    list-style: none;
+  }
 
-.title {
-  display: block;
-  margin-top: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
-}
+  .header {
+    background-image: url(../img/navbar.png);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
 
-#nav {
-  /*width: 100%;
+  /* Logo */
+  .logo {
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  .logo {
+    color: #07295b;
+    font-size: 16px;
+  }
+
+  /* Nav menu */
+  .nav-mobile {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #b4e0f5;
+    overflow: hidden;
+  }
+
+  .menu a {
+    display: block;
+    padding: 30px;
+    color: var(--white);
+  }
+
+  .menu a:hover {
+    background-color: var(--gray);
+  }
+
+  .nav-mobile {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+  }
+
+  /* Menu Icon */
+  .hamb {
+    cursor: pointer;
+    float: right;
+    padding: 26px 20px;
+  }
+
+  /* Style label tag */
+
+  .hamb-line {
+    background-color: #07295b;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+  }
+
+  /* Style span tag */
+
+  .hamb-line::before,
+  .hamb-line::after {
+    background-color: #07295b;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+
+  .hamb-line::before {
+    top: 5px;
+  }
+
+  .hamb-line::after {
+    top: -5px;
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  /* Hide checkbox */
+  /* Toggle menu icon */
+  .side-menu:checked~nav {
+    max-height: 100%;
+  }
+
+  .side-menu:checked~.hamb .hamb-line {
+    background-color: white;
+  }
+
+  .side-menu:checked~.hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .side-menu:checked~.hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .body-h1 {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-size: 12.80px;
+    text-align: center;
+    fill-opacity: 0;
+  }
+
+  @supports((text-stroke: 2px #07295b) or (-webkit-text-stroke: 2px #07295b)) {
+    .body-h1 {
+      color: transparent;
+      -webkit-text-stroke: 1px #07295b;
+      text-stroke: 1px #07295b;
+      text-shadow: none;
+    }
+  }
+
+  #top {
+    background-image: url(../img/top-natsu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 40px;
+  }
+
+  .top-wrapper p {
+    color: #07295b;
+    font-size: 20.00px;
+    text-shadow:
+      -1px -1px 0 #ffffff68,
+      0 -1px 0 #ffffff68,
+      1px -1px 0 #ffffff68,
+      1px 0 0 #ffffff68,
+      1px 1px 0 #ffffff68,
+      0 1px 0 #ffffff68,
+      -1px 1px 0 #ffffff68,
+      -1px 0 0 #ffffff68;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+  }
+
+  .title {
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #nav {
+    /*width: 100%;
     position: fixed;
     top: 0;
     z-index: 5; */
-  background-image: url(../img/navbar.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  margin-top: -80px;
-}
-
-.nav-text {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-}
-
-.nav-text a {
-  font-family: 'Kosugi Maru', sans-serif;
-  font-size: 27.78px;
-  color: #07295b;
-  text-decoration: none;
-}
-
-.nav-text .link:hover {
-  color: #fff
-}
-
-#body1 {
-  background-image: url(../img/bg-1.png);
-  background-size: 100%;
-  background-attachment: fixed;
-}
-
-.waves {
-  background-image: url(../img/waves.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  overflow: visible;
-}
-
-.body-h1 h1 {
-  text-align: center;
-  margin: 20px 20px 0px 20px;
-  padding: 35px
-}
-
-/* slider */
-
-.slideshow-container {
-  width: 50%;
-  position: relative;
-  justify-content: center;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: flex;
-  text-align: center;
-}
-
-.slide-img {
-  width: 100%;
-  max-width: 630px;
-  height: auto;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.swiper-slide p{
-  margin-top: 35px;
-  margin-bottom: 35px;
-}
-.swiper-container{
-  width: 50%;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.swiper-slide {
-  text-align: center;
-  justify-content: center;
-}
-
-.swiper-slide img {
-  width: auto;
-  height: 450px;
-  object-fit: cover;
-  margin-bottom: 35px;
-  margin-top: 35px;
-}
-/* target all bullets */
-.swiper-pagination-bullet.swiper-pagination-bullet {
-  background-color: #55afc6;
-  opacity: 1;
-  height: 15px;
-  width: 15px;
-}
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #236e81;
-  opacity: 1;
-  height: 15px;
-  width: 15px;
-}
-
-
-.dot-wrapper {
-  max-width: 100%;
-  text-align: center;
-  display: block;
-}
-
-.swiper-pagination {
-  margin-top: 30px;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #55afc6;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #236e81;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
+    background-image: url(../img/navbar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-top: -80px;
   }
 
-  to {
-    opacity: 1
+  .nav-text {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
   }
-}
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
+  .nav-text a {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 27.78px;
+    color: #07295b;
+    text-decoration: none;
+  }
 
-.text {
-  font-family: 'Kosugi Maru', sans-serif;
-  font-size: 23.04px;
-  text-align: center;
-  margin: 0 auto;
-}
+  .nav-text .link:hover {
+    color: #fff
+  }
 
-.button-1-container {
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
+  #body1 {
+    background-image: url(../img/bg-1.png);
+    background-size: 100%;
+    background-attachment: fixed;
+  }
 
-.button-1a {
-  background-image: url(../img/button-1.png);
-  background-repeat: no-repeat;
-  max-width: 50%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 2;
-}
+  .waves {
+    background-image: url(../img/waves.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: visible;
+  }
 
-.p-button {
-  color: #9a9516;
-  font-family: 'Kosugi Maru', sans-serif;
-  font-size: 28.80px;
-  text-shadow:
-    -1px -1px 0 #fff,
-    0 -1px 0 #fff,
-    1px -1px 0 #fff,
-    1px 0 0 #fff,
-    1px 1px 0 #fff,
-    0 1px 0 #fff,
-    -1px 1px 0 #fff,
-    -1px 0 0 #fff;
-  text-align: center;
-  margin: 58px 10px 80px 10px;
-}
+  .body-h1 h1 {
+    text-align: center;
+    padding: 15px
+  }
 
-.p-button .bold a {
-  color: #827e16;
-  text-decoration: none;
+  .swiper-slide p {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+p {
+  font-size: 12.80px;
 }
+  .swiper-container {
+    width: 80%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 
-.sand {
-  position: relative;
-  margin-bottom: -50px;
-}
+  .swiper-slide {
+    text-align: center;
+    justify-content: center;
+  }
 
-.sand-bg {
-  background-image: url(../img/sand.png);
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 367px;
-  top: -65px;
-  position: relative;
-  z-index: 1;
-}
+  .swiper-slide img {
+    width: auto;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    margin-top: 35px;
+  }
 
-.kani img {
-  position: absolute;
-  top: -100px;
-  z-index: 3;
-  display: block;
-}
+  /* target all bullets */
+  .swiper-pagination-bullet.swiper-pagination-bullet {
+    background-color: #55afc6;
+    opacity: 1;
+    height: 15px;
+    width: 15px;
+  }
 
-.kani .kani1 img {
-  right: 0;
-}
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #236e81;
+    opacity: 1;
+    height: 15px;
+    width: 15px;
+  }
 
-/* Body 2 */
-.kani-2 .kani3 img {
-  right: 0;
-}
 
-.kani-2 .kani1 img {
-  top: 30px;
-  left: 250px;
-}
+  .dot-wrapper {
+    max-width: 100%;
+    text-align: center;
+    display: block;
+  }
 
-/* Body 3 */
-.kani-3 .kani4 img {
-  right: 0;
-}
+  .swiper-pagination {
+    position: absolute;
+    margin-top: 50px;
+  }
 
-.kani-3 .kani1 img {
-  top: 30px;
-  left: 250px;
-}
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #55afc6;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
 
-.kani-3 .kani3 img {
-  top: 20px;
-  left: 550px;
-}
+  .active,
+  .dot:hover {
+    background-color: #236e81;
+  }
 
-.kani-3 .hitode img {
-  top: 30px;
-  left: 1400px;
-}
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
 
-/* Body 2 */
-#body-2 {
-  background-image: url(../img/bg-2.png);
-}
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
 
-#body-3 {
-  background-image: url(../img/bg-4.png);
-}
+    to {
+      opacity: 1
+    }
+  }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-  justify-content: center;
-}
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 1200px;
+  }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 20%;
-  padding: 0 4px;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+  .text {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 12.80px;
+    text-align: center;
+    margin: 0 auto;
+  }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 50%;
-}
+  .button-1-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.button-2 {
-  background-image: url(../img/button-2.png);
-  background-repeat: no-repeat;
-  max-width: 99%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 2;
-}
+  .button-1a {
+    background-image: url(../img/button-1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    width: 650px;
+    z-index: 2;
+  }
 
-.button-2 .p-button {
-  margin: 50px 10px 0px 10px;
-  padding: 80px 10px 80px 10px;
-}
+  .p-button {
+    color: #9a9516;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 16.00px;
+    text-shadow:
+      -1px -1px 0 #fff,
+      0 -1px 0 #fff,
+      1px -1px 0 #fff,
+      1px 0 0 #fff,
+      1px 1px 0 #fff,
+      0 1px 0 #fff,
+      -1px 1px 0 #fff,
+      -1px 0 0 #fff;
+    text-align: center;
+    margin: 20px 10px 20px 10px;
+  }
 
-.button-3-container {
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
+  .p-button .bold a {
+    color: #827e16;
+    text-decoration: none;
+  }
 
-.button-3a {
-  background-image: url(../img/button-3a.png);
-  background-repeat: no-repeat;
-  max-width: 50%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 2;
-}
+  .sand {
+    position: relative;
+    margin-bottom: -50px;
+  }
 
-.button-3b {
-  background-image: url(../img/button-3b.png);
-  background-repeat: no-repeat;
-  max-width: 50%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 2;
-}
+  .sand-bg {
+    background-image: url(../img/sand.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    top: -65px;
+    position: relative;
+    z-index: 1;
+  }
 
-.button-3-container .p-button {
-  margin: 58px 10px 63px 10px;
-}
+  .kani img {
+    max-width: 80px;
+    position: absolute;
+    top: -100px;
+    z-index: 3;
+    display: block;
+  }
 
-.button-4 {
-  background-image: url(../img/button-4.png);
-  background-repeat: no-repeat;
-  max-width: 99%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 2;
-}
+  .kani .kani1 img {
+    max-width: 80px;
+    right: 0;
+  }
 
-.button-4 .p-button {
-  margin: 50px 10px -20px 10px;
-  padding: 104px 10px 116px 10px;
-}
+  /* Body 2 */
+  .kani-2 .kani3 img {
+    max-width: 80px;
+    right: 0;
+  }
 
-.button-5 {
-  background-image: url(../img/button-5.png);
-  background-repeat: no-repeat;
-  max-width: 99%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 4;
-}
+  .kani-2 .kani1 img {
+    max-width: 80px;
+    top: 30px;
+    left: 250px;
+  }
 
-.button-5 {
-  margin: 50px 10px -30px 10px;
-  padding: 186px 10px 107px 10px;
-}
+  /* Body 3 */
+  .kani-3 .kani4 img {
+    max-width: 80px;
+    right: 0;
+  }
 
-.button-5 .p-button {
-  margin: 0;
-}
+  .kani-3 .kani1 img {
+    max-width: 80px;
+    top: 30px;
+    left: 250px;
+  }
 
-.button-5 .p-button2 {
-  color: #9a9516;
-  font-family: 'Kosugi Maru', sans-serif;
-  font-size: 45px;
-  text-shadow:
-    -1px -1px 0 #fff,
-    0 -1px 0 #fff,
-    1px -1px 0 #fff,
-    1px 0 0 #fff,
-    1px 1px 0 #fff,
-    0 1px 0 #fff,
-    -1px 1px 0 #fff,
-    -1px 0 0 #fff;
-  text-align: center;
-}
+  .kani-3 .kani3 img {
+    max-width: 80px;
+    top: 20px;
+    left: 550px;
+  }
 
-.button-67 {
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
+  .kani-3 .hitode img {
+    max-width: 80px;
+    top: 30px;
+    left: 1400px;
+  }
 
-.button-6 {
-  background-image: url(../img/button-6.png);
-  background-repeat: no-repeat;
-  max-width: 50%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 8;
-}
+  /* Body 2 */
+  #body-2 {
+    background-image: url(../img/bg-2.png);
+  }
 
-.button-7 {
-  background-image: url(../img/button-7.png);
-  background-repeat: no-repeat;
-  max-width: 50%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 8;
-}
+  #body-3 {
+    background-image: url(../img/bg-4.png);
+  }
 
-.button-67 .p-button {
-  font-size: 45px;
-  margin: 32px 0px -30px 10px;
-  padding: 249px 0px 150px 192px;
-}
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+  }
 
-.button-6 {
-  margin-left: 7px;
-}
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 20%;
+    padding: 0 4px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 
-.button-7 {
-  margin-left: -10px;
-  margin-right: 10px;
-}
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 50%;
+  }
 
-.button-8 {
-  background-image: url(../img/button-8.png);
-  background-repeat: no-repeat;
-  max-width: 99%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-  flex: 1;
-  z-index: 2;
-  margin-left: 12px;
-  padding: 10px 10px 10px 10px;
-}
+  .button-2 {
+    background-image: url(../img/button-2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+  }
 
-.button-8 .p-button {
-  font-size: 45px;
-  margin: 9px 0px -30px 0px;
-  padding: 115px 0px 115px 0px;
-}
+  .button-3-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
 
-.container2 {
-  display: block;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-}
+  .button-3a {
+    background-image: url(../img/button-3a.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    width: 650px;
+    z-index: 2;
+  }
 
-.slideshow-container2 {
-  width: 50%;
-  position: relative;
-  justify-content: center;
-  margin: 0 auto;
-}
+  .button-3b {
+    background-image: url(../img/button-3b.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    width: 650px;
+    z-index: 2;
+  }
 
-.rating {
-  background-color: #fff;
-  box-shadow: 1px 5px 5px 6px #a8852e;
-  background-repeat: no-repeat;
-  max-width: 99%;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
-}
+  .button-3-container .p-button {
+    margin: 58px 10px 63px 10px;
+  }
 
-.rating p {
-  color: #775b2f;
-  font-family: 'Kosugi Maru', sans-serif;
-  font-size: 28.80px;
-  text-align: center;
-  margin-top: 10px;
-  padding-bottom: 30px;
-}
+  .button-4 {
+    background-image: url(../img/button-4.png);
+    background-repeat: no-repeat;
+    max-width: 99%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 2;
+  }
 
-.rating .star {
-  color: #bc9d4a;
-  padding-top: 20px;
-  padding-bottom: 0;
-  margin: 0;
-}
+  .button-4 .p-button {
+    margin: 50px 10px -20px 10px;
+    padding: 104px 10px 116px 10px;
+  }
 
-.bg-beach {
-  background-image: url(../img/bg-3.png);
-  background-size: 100%;
-}
+  .button-5 {
+    background-image: url(../img/button-5.png);
+    background-repeat: no-repeat;
+    max-width: 99%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 4;
+  }
 
-@media screen and (max-width: 375px) {
+  .button-5 {
+    margin: 50px 10px -30px 10px;
+    padding: 186px 10px 107px 10px;
+  }
+
+  .button-5 .p-button {
+    margin: 0;
+  }
+
+  .button-5 .p-button2 {
+    color: #9a9516;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 16px;
+    text-shadow:
+      -1px -1px 0 #fff,
+      0 -1px 0 #fff,
+      1px -1px 0 #fff,
+      1px 0 0 #fff,
+      1px 1px 0 #fff,
+      0 1px 0 #fff,
+      -1px 1px 0 #fff,
+      -1px 0 0 #fff;
+    text-align: center;
+  }
+
+  .button-67 {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .button-6 {
+    background-image: url(../img/button-6.png);
+    background-repeat: no-repeat;
+    max-width: 50%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 8;
+  }
+
+  .button-7 {
+    background-image: url(../img/button-7.png);
+    background-repeat: no-repeat;
+    max-width: 50%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 8;
+  }
+
+  .button-67 .p-button {
+    font-size: 16px;
+    margin: 32px 0px -30px 10px;
+    padding: 249px 0px 150px 192px;
+  }
+
+  .button-6 {
+    margin-left: 7px;
+  }
+
+  .button-7 {
+    margin-left: -10px;
+    margin-right: 10px;
+  }
+
+  .button-8 {
+    background-image: url(../img/button-8.png);
+    background-repeat: no-repeat;
+    max-width: 99%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 2;
+    margin-left: 12px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .button-8 .p-button {
+    font-size: 16px;
+    margin: 9px 0px -30px 0px;
+    padding: 115px 0px 115px 0px;
+  }
+
+  .container2 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .slideshow-container2 {
+    width: 50%;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .rating {
+    background-color: #fff;
+    box-shadow: 1px 5px 5px 6px #a8852e;
+    background-repeat: no-repeat;
+    max-width: 99%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+  }
+
+  .rating p {
+    color: #775b2f;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 28.80px;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .rating .star {
+    color: #bc9d4a;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .bg-beach {
+    background-image: url(../img/bg-3.png);
+    background-size: 100%;
+  }
+
   .column {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    display: none;
+  }
+
+  .body-h1 {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-size: 28.80px;
+    text-align: center;
+    fill-opacity: 0;
+  }
+
+  @supports((text-stroke: 2px #07295b) or (-webkit-text-stroke: 2px #07295b)) {
+    .body-h1 {
+      color: transparent;
+      -webkit-text-stroke: 3px #07295b;
+      text-stroke: 2px #07295b;
+      text-shadow: none;
+    }
+  }
+
+  #top {
+    background-image: url(../img/top-natsu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 60px;
+  }
+
+  .top-wrapper p {
+    color: #07295b;
+    font-size: 36.00px;
+    text-shadow:
+      -1px -1px 0 #ffffff68,
+      0 -1px 0 #ffffff68,
+      1px -1px 0 #ffffff68,
+      1px 0 0 #ffffff68,
+      1px 1px 0 #ffffff68,
+      0 1px 0 #ffffff68,
+      -1px 1px 0 #ffffff68,
+      -1px 0 0 #ffffff68;
+    text-align: center;
+    margin: 80px 20px 90px 20px;
+  }
+
+  .title {
+    display: block;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #nav {
+    /*width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 5; */
+    background-image: url(../img/navbar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-top: -80px;
+  }
+
+  .nav-text {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+
+  .nav-text a {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 27.78px;
+    color: #07295b;
+    text-decoration: none;
+  }
+
+  .nav-text .link:hover {
+    color: #fff
+  }
+
+  #body1 {
+    background-image: url(../img/bg-1.png);
+    background-size: 100%;
+    background-attachment: fixed;
+  }
+
+  .waves {
+    background-image: url(../img/waves.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: visible;
+  }
+
+  .body-h1 h1 {
+    text-align: center;
+    margin: 20px 20px 0px 20px;
+    padding: 35px
+  }
+
+  /* slider */
+
+  .slideshow-container {
+    width: 50%;
+    position: relative;
+    justify-content: center;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: flex;
+    text-align: center;
+  }
+
+  .slide-img {
+    width: 100%;
+    max-width: 630px;
+    height: auto;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .swiper-slide p {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .swiper-container {
+    width: 50%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .swiper-slide img {
+    width: auto;
+    height: 450px;
+    object-fit: cover;
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+
+  /* target all bullets */
+  .swiper-pagination-bullet.swiper-pagination-bullet {
+    background-color: #55afc6;
+    opacity: 1;
+    height: 15px;
+    width: 15px;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #236e81;
+    opacity: 1;
+    height: 15px;
+    width: 15px;
+  }
+
+
+  .dot-wrapper {
+    max-width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  .swiper-pagination {
+    margin-top: 30px;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #55afc6;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active,
+  .dot:hover {
+    background-color: #236e81;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 1200px;
+  }
+
+  .text {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 23.04px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .button-1-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .button-1a {
+    background-image: url(../img/button-1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    width: 650px;
+    z-index: 2;
+  }
+
+  .p-button {
+    color: #9a9516;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 28.80px;
+    text-shadow:
+      -1px -1px 0 #fff,
+      0 -1px 0 #fff,
+      1px -1px 0 #fff,
+      1px 0 0 #fff,
+      1px 1px 0 #fff,
+      0 1px 0 #fff,
+      -1px 1px 0 #fff,
+      -1px 0 0 #fff;
+    text-align: center;
+    margin: 58px 10px 80px 10px;
+  }
+
+  .p-button .bold a {
+    color: #827e16;
+    text-decoration: none;
+  }
+
+  .sand {
+    position: relative;
+    margin-bottom: -50px;
+  }
+
+  .sand-bg {
+    background-image: url(../img/sand.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 367px;
+    top: -65px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .kani img {
+    position: absolute;
+    top: -100px;
+    z-index: 3;
+    display: block;
+  }
+
+  .kani .kani1 img {
+    right: 0;
+  }
+
+  /* Body 2 */
+  .kani-2 .kani3 img {
+    right: 0;
+  }
+
+  .kani-2 .kani1 img {
+    top: 30px;
+    left: 250px;
+  }
+
+  /* Body 3 */
+  .kani-3 .kani4 img {
+    right: 0;
+  }
+
+  .kani-3 .kani1 img {
+    top: 30px;
+    left: 250px;
+  }
+
+  .kani-3 .kani3 img {
+    top: 20px;
+    left: 550px;
+  }
+
+  .kani-3 .hitode img {
+    top: 30px;
+    left: 1400px;
+  }
+
+  /* Body 2 */
+  #body-2 {
+    background-image: url(../img/bg-2.png);
+  }
+
+  #body-3 {
+    background-image: url(../img/bg-4.png);
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 20%;
+    padding: 0 4px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  .button-2 {
+    background-image: url(../img/button-2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .button-2 .p-button {
+    margin: 50px 10px 0px 10px;
+    padding: 80px 10px 80px 10px;
+  }
+
+  .button-3-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .button-3a {
+    background-image: url(../img/button-3a.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    width: 650px;
+    z-index: 2;
+  }
+
+  .button-3b {
+    background-image: url(../img/button-3b.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    width: 650px;
+    z-index: 2;
+  }
+
+  .button-3-container .p-button {
+    margin: 58px 10px 63px 10px;
+  }
+
+  .button-4 {
+    background-image: url(../img/button-4.png);
+    background-repeat: no-repeat;
+    max-width: 99%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 2;
+  }
+
+  .button-4 .p-button {
+    margin: 50px 10px -20px 10px;
+    padding: 104px 10px 116px 10px;
+  }
+
+  .button-5 {
+    background-image: url(../img/button-5.png);
+    background-repeat: no-repeat;
+    max-width: 99%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 4;
+  }
+
+  .button-5 {
+    margin: 50px 10px -30px 10px;
+    padding: 186px 10px 107px 10px;
+  }
+
+  .button-5 .p-button {
+    margin: 0;
+  }
+
+  .button-5 .p-button2 {
+    color: #9a9516;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 45px;
+    text-shadow:
+      -1px -1px 0 #fff,
+      0 -1px 0 #fff,
+      1px -1px 0 #fff,
+      1px 0 0 #fff,
+      1px 1px 0 #fff,
+      0 1px 0 #fff,
+      -1px 1px 0 #fff,
+      -1px 0 0 #fff;
+    text-align: center;
+  }
+
+  .button-67 {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .button-6 {
+    background-image: url(../img/button-6.png);
+    background-repeat: no-repeat;
+    max-width: 50%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 8;
+  }
+
+  .button-7 {
+    background-image: url(../img/button-7.png);
+    background-repeat: no-repeat;
+    max-width: 50%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 8;
+  }
+
+  .button-67 .p-button {
+    font-size: 45px;
+    margin: 32px 0px -30px 10px;
+    padding: 249px 0px 150px 192px;
+  }
+
+  .button-6 {
+    margin-left: 7px;
+  }
+
+  .button-7 {
+    margin-left: -10px;
+    margin-right: 10px;
+  }
+
+  .button-8 {
+    background-image: url(../img/button-8.png);
+    background-repeat: no-repeat;
+    max-width: 99%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    flex: 1;
+    z-index: 2;
+    margin-left: 12px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .button-8 .p-button {
+    font-size: 45px;
+    margin: 9px 0px -30px 0px;
+    padding: 115px 0px 115px 0px;
+  }
+
+  .container2 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .slideshow-container2 {
+    width: 50%;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .rating {
+    background-color: #fff;
+    box-shadow: 1px 5px 5px 6px #a8852e;
+    background-repeat: no-repeat;
+    max-width: 99%;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+  }
+
+  .rating p {
+    color: #775b2f;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 28.80px;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .rating .star {
+    color: #bc9d4a;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .bg-beach {
+    background-image: url(../img/bg-3.png);
+    background-size: 100%;
   }
 }
