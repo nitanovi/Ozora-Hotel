@@ -13,14 +13,18 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  outline: 1px solid red;
+outline: 1px solid red; */
 }
 
 p {
   font-family: 'Kosugi Maru', sans-serif;
+  font-size: 23.04px;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 1023px) {
+  .mobile {
+    display: none;
+  }
   #nav {
     display: none;
   }
@@ -251,8 +255,8 @@ p {
   }
 
   .swiper-slide p {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 31px;
   }
 p {
   font-size: 12.80px;
@@ -364,7 +368,7 @@ p {
   .button-1a {
     background-image: url(../img/button-1.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
     position: relative;
     width: 650px;
@@ -385,7 +389,7 @@ p {
       -1px 1px 0 #fff,
       -1px 0 0 #fff;
     text-align: center;
-    margin: 20px 10px 20px 10px;
+    margin: 30px 10px 40px 10px;
   }
 
   .p-button .bold a {
@@ -404,63 +408,64 @@ p {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100px;
-    top: -65px;
+    top: -32px;
     position: relative;
     z-index: 1;
   }
 
   .kani img {
-    max-width: 80px;
+    width: 80px;
     position: absolute;
-    top: -100px;
+    top: -27px;
     z-index: 3;
     display: block;
   }
 
   .kani .kani1 img {
-    max-width: 80px;
+    width: 80px;
     right: 0;
   }
 
   /* Body 2 */
   .kani-2 .kani3 img {
-    max-width: 80px;
+    width: 80px;
     right: 0;
   }
 
   .kani-2 .kani1 img {
-    max-width: 80px;
+    width: 80px;
     top: 30px;
     left: 250px;
   }
 
   /* Body 3 */
   .kani-3 .kani4 img {
-    max-width: 80px;
+    width: 80px;
     right: 0;
   }
 
   .kani-3 .kani1 img {
-    max-width: 80px;
+    width: 80px;
     top: 30px;
-    left: 250px;
+    left: 70px;
   }
 
   .kani-3 .kani3 img {
-    max-width: 80px;
+    width: 80px;
     top: 20px;
-    left: 550px;
+    left: 115px;
   }
 
   .kani-3 .hitode img {
-    max-width: 80px;
+    width: 50px;
     top: 30px;
-    left: 1400px;
+    right: 0px;
   }
 
   /* Body 2 */
   #body-2 {
     background-image: url(../img/bg-2.png);
+    background-repeat: no-repeat;
   }
 
   #body-3 {
@@ -480,8 +485,6 @@ p {
     max-width: 20%;
     padding: 0 4px;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
   }
 
   .column img {
@@ -713,7 +716,6 @@ p {
     .body-h1 {
       color: transparent;
       -webkit-text-stroke: 3px #07295b;
-      text-stroke: 2px #07295b;
       text-shadow: none;
     }
   }
@@ -764,6 +766,7 @@ p {
     top: 0;
     z-index: 100;
     margin-top: -80px;
+    display: block;
   }
 
   .nav-text {
@@ -787,8 +790,9 @@ p {
 
   #body1 {
     background-image: url(../img/bg-1.png);
-    background-size: 100%;
-    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1400px;
   }
 
   .waves {
@@ -842,21 +846,8 @@ p {
     user-select: none;
   }
 
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
   .swiper-slide p {
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   .swiper-container {
@@ -867,6 +858,7 @@ p {
     align-content: center;
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 5px;
   }
 
   .swiper-slide {
@@ -878,7 +870,7 @@ p {
     width: auto;
     height: 450px;
     object-fit: cover;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     margin-top: 35px;
   }
 
@@ -948,7 +940,6 @@ p {
     margin-top: 50px;
     width: 1200px;
   }
-
   .text {
     font-family: 'Kosugi Maru', sans-serif;
     font-size: 23.04px;
@@ -959,7 +950,6 @@ p {
   .button-1-container {
     justify-content: center;
     display: flex;
-    flex-wrap: wrap;
   }
 
   .button-1a {
@@ -975,7 +965,7 @@ p {
   .p-button {
     color: #9a9516;
     font-family: 'Kosugi Maru', sans-serif;
-    font-size: 28.80px;
+    font-size: 24.80px;
     text-shadow:
       -1px -1px 0 #fff,
       0 -1px 0 #fff,
@@ -986,7 +976,7 @@ p {
       -1px 1px 0 #fff,
       -1px 0 0 #fff;
     text-align: center;
-    margin: 58px 10px 80px 10px;
+    margin: 68px 10px 80px 10px;
   }
 
   .p-button .bold a {
@@ -1005,59 +995,73 @@ p {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 367px;
-    top: -65px;
+    top: -115px;
     position: relative;
     z-index: 1;
   }
 
   .kani img {
     position: absolute;
-    top: -100px;
+    top: -80px;
     z-index: 3;
     display: block;
+    size:;
+    width: 197px;
   }
 
   .kani .kani1 img {
     right: 0;
+    width: 197px;
   }
 
   /* Body 2 */
   .kani-2 .kani3 img {
     right: 0;
+    width: 197px;
   }
 
   .kani-2 .kani1 img {
     top: 30px;
     left: 250px;
+    width: 197px;
   }
 
   /* Body 3 */
   .kani-3 .kani4 img {
     right: 0;
+    width: 197px;
   }
 
   .kani-3 .kani1 img {
     top: 30px;
     left: 250px;
+    width: 197px;
   }
 
   .kani-3 .kani3 img {
     top: 20px;
     left: 550px;
+    width: 197px;
   }
 
   .kani-3 .hitode img {
     top: 30px;
-    left: 1400px;
+    right: 0px;
+    width: 197px;
   }
 
   /* Body 2 */
   #body-2 {
     background-image: url(../img/bg-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1500px;
   }
 
   #body-3 {
     background-image: url(../img/bg-4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .row {
@@ -1068,13 +1072,18 @@ p {
   }
 
   /* Create four equal columns that sits next to each other */
-  .column {
+  .column1 {
     flex: 25%;
-    max-width: 20%;
+    max-width: 50%;
     padding: 0 4px;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    text-align: right;
+  }
+  .column2 {
+    flex: 25%;
+    max-width: 50%;
+    padding: 0 4px;
+    text-align: left;
+    margin-top: 20px;
   }
 
   .column img {
@@ -1090,11 +1099,12 @@ p {
     background-position: center;
     position: relative;
     z-index: 2;
+    margin: 0px 5px 0px 0px;
   }
 
   .button-2 .p-button {
-    margin: 50px 10px 0px 10px;
-    padding: 80px 10px 80px 10px;
+    margin: 0px 10px 0px 10px;
+    padding: 65px 10px 80px 10px;
   }
 
   .button-3-container {
