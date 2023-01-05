@@ -502,23 +502,28 @@ p {
   .button-2 {
     background-image: url(../img/button-2.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
     position: relative;
+    margin-right: 5px;
     z-index: 2;
+  }
+
+  .button-2 p {
+    margin: 0px 0px -30px 0px;
+    padding: 56px 0px 56px 0px;
   }
 
   .button-3-container {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
   }
 
   .button-3a {
     background-image: url(../img/button-3a.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
     position: relative;
     width: 650px;
@@ -528,7 +533,7 @@ p {
   .button-3b {
     background-image: url(../img/button-3b.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
     position: relative;
     width: 650px;
@@ -1014,7 +1019,6 @@ p {
     top: -80px;
     z-index: 3;
     display: block;
-    size: ;
     width: 197px;
   }
 
@@ -1068,9 +1072,10 @@ p {
   }
 
   #body-3 {
-    background-image: url(../img/bg-4.png);
+    background-image: url(../img/bg-2.png);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 1550px;
   }
 
   .row {
@@ -1312,12 +1317,36 @@ p {
   }
 }
 
-@media screen and (min-width: 1242px) {
+@media screen and (min-width: 1164px) {
   #body-2 {
     background-image: url(../img/bg-2.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1500px;
+    height: 1450px;
+  }
+
+  .button-67 .p-button {
+    margin: 230px 0px 2px 10px;
+    padding: 82px 11px 195px 118px;
+    font-size: 28.80px;
+  }
+}
+
+@media screen and (min-width: 1315px) {
+  #body-2 {
+    background-image: url(../img/bg-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1510px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #body-2 {
+    background-image: url(../img/bg-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1560px;
   }
 
   #body-3 {
@@ -1326,9 +1355,5 @@ p {
     background-repeat: no-repeat;
   }
 
-  .button-67 .p-button {
-    margin: 230px 0px 2px 10px;
-    padding: 82px 11px 195px 118px;
-    font-size: 28.80px;
-  }
+
 }
